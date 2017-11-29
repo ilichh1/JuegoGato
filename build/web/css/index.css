@@ -1,0 +1,49 @@
+html { height: 100% }
+			body {
+				font-family: sans-serif;
+				box-sizing: border-box;
+				background-color: #333;
+				/*Nothing to select*/
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+			div.tictactoe {
+				position: absolute;
+				background-color: grey;
+				height: 250px;
+				width: 250px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			div.tictactoe > .cell {
+				position: relative;
+				display: inline-block;
+				height: 32%;
+				width: 32%;
+				background-color: white;
+				margin-left: 3px;
+			}
+			.cell.active:after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				font-size: 4em;
+				text-transform: uppercase;
+			}
+			/* Player styles */
+			.cell.active.o {
+				background-color: cyan !important;
+			}
+			.cell.active.x {
+				background-color: tomato !important;
+			}
+			.cell.active.o:after {
+				content: "o";
+			}
+			.cell.active.x:after {
+				content: "x";
+			}
